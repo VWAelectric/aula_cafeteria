@@ -1,0 +1,187 @@
+*{  
+    margin: 0;
+    padding: 0;
+    /* 
+    Remover as margens internas e externas de todos os elementos 
+    (tags) html. Utilizamos os comandos (margin(externas)) com o 
+    valor (0) e (padding(interna)) com o valor (0).
+    */
+
+    box-sizing: border-box;
+    /* 
+    Utilizamos o comando (box-sizing) com o valor (border-box).
+    Isso permite que as margens internas aplicadas ao elemento
+    html não interfiram no tamanho da caixa em que esse elemento 
+    está. 
+    */
+}
+header
+{  
+    height: 500px;
+    /* 
+    Com o comando (height) vamos aumentear a altura do header 
+    para (500px). 
+    */
+
+    background-image: url("../img/cafeteria2.png");
+    /* 
+    Usamos o comando background-image para adicionar uma imagem 
+    de fundo ao header. Utilizamos o comando (../) para voltar um 
+    nível anterior e assim conseguir acessar a pasta img que está
+    fora da pasta css. 
+    */
+
+    background-size: 100%;
+    /* 
+    Ajustar o tamanho da foto para (100%) de largura. 
+    */
+
+    background-position: 0 -40px;
+    /* 
+    Para realizar o deslocamento da imagem de fundo utilizaremos 
+    o comando (background-position). Assim você pode deslocar para 
+    cima ou para baixo no eixo y e para direita ou esquerda no eixo 
+    x.
+    */
+}
+#cabecalho
+{
+    background-color: rgba(0,0,0,0.4);
+    /* 
+    Aplicar uma cor de fundo preto  com um efeito de tranparência. 
+    O comando será (background-color) com o valor (rgba), onde "a" 
+    do comando rgb é o efeito de transparência que varia entre 0 e 
+    1, onde 0(zero) é totalmente transparente e 1 totalmente visível. 
+    */
+    height: 500px;
+    color: #fff;
+}
+
+#superior
+{
+    display: flex;
+    /* 
+    O comando display permite dispor os elementos de algumas maneiras,
+    uma deles flex>>(flexivel). Isso permite que o conteúdo deste 
+    elemento fique flexivel. 
+    */
+    
+    flex-direction: row;
+    /* 
+    Para este exemplo foi aplicado uma estrutura flexivel em linha.
+    Portanto o comando flex-direction recebeu o valor (row)>>(linha). 
+    */
+    
+    flex-wrap: wrap; 
+    /* 
+    O comando flex-wrap realiza uma quebra de linha. 
+    */
+}
+h1
+{
+    color: rgb(253, 216, 53);
+    flex: 1;
+    text-align: center; /* Alinhar o título ao centro */
+    padding-top: 25px; /* Baixar o título em 25px */
+    font-family:century;
+    /* 
+    O comando font-family Escolhe o tipo de fonte. 
+    */
+    font-size: 25pt; /* Mudar tamanho da fonte */  
+}
+#superior nav
+{
+    flex: 2;
+    text-align: center; /* Alinhar o texto ao centro */
+    padding-top: 30px; /* Baixar o menu de navegação em 30px */
+}
+
+#superior nav ul
+{  
+    /* 
+    Vamos retirar o marcador da lista ul. Esta lista está na parte superior da página, 
+    dentro do id superior. O caminho que utilizamos foi: (#superior nav ul). 
+    */
+    list-style: none;  
+    /* 
+    Usamos o comando list-style como (none)>>(nenhum) para retirar o marcador. 
+    */
+} 
+
+#superior nav ul li
+{
+    display: inline-block; 
+    /* 
+    Para dispor(display) os itens do menu em linha, utilizaremos o comando diaplay
+    com o valor inline-block
+    */
+    padding: 10px 10px; /* Aumenta a distância entre os elementos */
+    transition: ease 0.5s; /* A cor de fundo vai surgindo em 1 segundo */
+}
+
+#superior nav ul li:hover
+{
+    /* 
+    Foi aplicado ai item li um atributo hover, que é ativado quando o usuário 
+    passa o ponteiro do mouse sobre o intem li. Aplicamos um efeito de cor de 
+    fundo, isso permite que ao passar o mouse sobre o link o fundo fica de cor diferente.
+    */
+    background-color: rgba(163,128,104, 0.5);
+
+/* O comando (transform: scale(1.3);) Aumentar o tamanho da letra ao passar o mouse */
+}
+
+#whatsapp
+{
+    flex: 1;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#superior nav ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt; /* Altera o tamanho da fonte */
+    text-transform: capitalize; /* Deixa a primeira letra de cada palavra maiúscula */
+    /* 
+    O comando text-transform muda o formato da letra(caracter) o tornando maiúsculo, 
+    minúsculo ou a primenta letra da palavra maiúscula.
+    Tudo maiúsculo --> text-transform: uppercase
+    Tudo minúsculo --> text-transform: lowercase
+    Primeira letra maiúscula --> text-transform: capitalize
+    */
+}
+
+#superior #whatsapp a
+{
+    color: #fff;
+    text-decoration: none; 
+    /* 
+    O comando (text-decoration), tira o under-line do link,(o under line é uma decoração)
+    e o valor adotado é (none)>>(nenhum) */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#cabecalho h2
+{
+    text-align: center;
+    padding-top: 130px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 8px;
+    /*
+    Foi aplicado o espaçamento entre as letras. O comando é (letter-spacing), você pode 
+    aplicar valores positivos ou negativos. Sendo, positivo as letras se espalham e 
+    negativo as letras se juntam. Comandp word-spacing espalha as letras.
+    */
+}
+#cabecalho p 
+{
+    text-align: justify;
+    padding-top: 20px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: century;
+    font-size: 12pt;
+}
